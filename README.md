@@ -1,84 +1,141 @@
-# 📝 Smart Task & Notes Management System (MERN)
+# 🤖 Smart Task Management System
 
-A premium, full-stack application for managing tasks with a modern UI, featuring secure authentication, real-time filtering, and a sleek dark mode.
+A smart task management application that helps users **create, manage, prioritize, and track tasks** with the help of **AI & Machine Learning**.
 
----
+The system uses AI/ML to make task management smarter by analyzing task information and providing useful predictions or recommendations.
 
-## 🛠️ Error Solution & Updates (Hindi & English)
+## 🚀 Features
 
-### ❓ What caused the Error? (`ECONNREFUSED 127.0.0.1:27017`)
-The error `MongoDB connection failed: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017` occurs because:
-1. **Local MongoDB Service was stopped** or not installed on your system.
-2. Node.js attempted to connect to `localhost:27017` on IPv6 (`::1`) first before IPv4 (`127.0.0.1`).
-3. The server executed `process.exit(1)`, crashing the backend process immediately.
+* ✅ Create, update and delete tasks
+* 📋 View and manage all tasks
+* 🎯 Task priority management
+* 📅 Task deadline tracking
+* 🤖 AI/ML-based task prediction/recommendation
+* 📊 Task status and progress tracking
+* 🔍 Easy task organization
+* 💻 User-friendly frontend interface
+* ⚙️ Backend API for task management
 
-### 💡 How We Fixed & Updated the Code:
-1. **IPv4 Binding Fix**: Updated `backend/.env` `MONGO_URI` to `mongodb://127.0.0.1:27017/smarttasks` for direct IPv4 loopback connection.
-2. **Automatic In-Memory Fallback (`mongodb-memory-server`)**: Updated `backend/server.js` with smart failover logic. If local MongoDB service is stopped, it automatically starts an embedded **In-Memory MongoDB server**. The server **never crashes** and works 100% out of the box!
-3. **Optional Persistent Local MongoDB**: If you want your tasks saved permanently on your local disk, start the Windows MongoDB Service by opening PowerShell as Administrator and running:
-   ```powershell
-   Start-Service MongoDB
-   ```
-   Or open Windows Services (`services.msc`) -> find **MongoDB Server** -> right click -> **Start**.
+## 🧠 AI & Machine Learning
 
----
+AI/ML is integrated into the project to make the task management process more intelligent.
 
-## 🚀 Quick Access (Running Project)
+Depending on the task data, the system can:
 
-- **Frontend UI**: [http://localhost:5173](http://localhost:5173)
-- **Backend API**: [http://localhost:5000](http://localhost:5000)
+* Predict task priority
+* Analyze task characteristics
+* Recommend suitable task priorities
+* Identify task patterns
+* Help users manage important tasks efficiently
 
----
+## 🛠️ Technologies Used
 
-## 🚀 How to Run the Project
+### Frontend
 
-### Option A: Standard Step-by-Step
+* HTML
+* CSS
+* JavaScript
 
-1. **Start Backend Server**:
-   ```bash
-   cd backend
-   npm start
-   ```
-   *(Or `npm run dev` for auto-reloading with nodemon)*
+### Backend
 
-2. **Start Frontend Dev Server** (in a new terminal window):
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+* Python
+* Flask
 
-### Option B: From Root Directory
-   ```bash
-   npm run dev:backend   # Starts backend
-   npm run dev:frontend  # Starts frontend
-   ```
+### AI & ML
 
----
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Machine Learning Model
 
-## ✨ Features
+### Database
 
-- **🔐 Secure Auth**: Register and Login with JWT authentication and bcrypt password hashing.
-- **📊 Real-time Dashboard**: Interactive stats for Total, Pending, Completed, and Overdue tasks.
-- **🛠 Full CRUD**: Create, read, update, and delete tasks with ease.
-- **🎨 Modern UI**: Clean, professional design built with vanilla CSS and Lucide icons.
-- **🌓 Dark Mode**: Fully integrated dark/light mode toggle (persisted in local storage).
-- **📱 Responsive**: Mobile-first design with a collapsible sidebar.
-- **🔍 Smart Search**: Filter tasks instantly by title or description.
-- **⏳ Due Dates**: Track deadlines with automatic overdue detection.
+* [Add your database name here]
 
----
+## 📂 Project Structure
 
-## 🛠 Tech Stack
+```text
+Smart-Task-Management/
+│
+├── backend/
+│   ├── app.py
+│   └── ...
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── model/
+│   └── trained_model.pkl
+│
+├── dataset/
+│   └── task_dataset.csv
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | React 19, Vite, Axios, React Router, Lucide Icons |
-| **Backend** | Node.js, Express 5 |
-| **Database** | MongoDB + Mongoose (with In-Memory Fallback) |
-| **Security** | JWT (JSON Web Tokens), bcryptjs |
-| **Styling** | Vanilla CSS (Custom Design System) |
+## ⚙️ Installation & Setup
 
----
+### 1. Clone the repository
 
-## 📄 License
-MIT License - Feel free to use this for your own projects!
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd Smart-Task-Management
+```
+
+### 2. Create virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the application
+
+```bash
+python backend/app.py
+```
+
+Open the application in your browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+## 🎯 Project Objective
+
+The main objective of this project is to combine **Task Management with Artificial Intelligence and Machine Learning** to create a smarter productivity system.
+
+Instead of only storing tasks, the system uses task-related data to provide intelligent assistance for better task planning and prioritization.
+
+## 🔮 Future Improvements
+
+* AI-based task recommendations
+* Smart deadline suggestions
+* Productivity prediction
+* Personalized task scheduling
+* User authentication
+* Dashboard with analytics
+* Email/notification reminders
+* Advanced AI assistant
+
+## 👩‍💻 Author
+
+**Harshita**
+
+AI & ML Project — Smart Task Management System
